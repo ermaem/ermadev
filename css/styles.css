@@ -9,14 +9,15 @@ body {
 h1 {
   color: #507DAD;
   font-family: 'Pacifico', cursive;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 400;
+  margin-bottom: -30px;
 }
 
 h2 {
   color: #507DAD;
   font-family: 'Acme', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: normal;
   padding-bottom: 10px;
 }
@@ -31,6 +32,7 @@ p {
   font-weight: bold;
   line-height: 2;
 }
+
 
 
 /* ====================================================================== */
@@ -48,33 +50,89 @@ p {
 }
 
 
+
 /* ====================================================================== */
 /* INTRO */
+
+
+.intro-container {
+  width: 100%;
+  height: 95vh;
+  background-image: url(../images/mountain.png), linear-gradient(#80cde9, #eaeff3);
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-size: 100%;
+}
+
 
 .top-cloud {
   position: absolute;
   right: 5%;
-  top: 40px;
+  top: 35vh;
   width: 28%;
+  z-index: 0;
+  filter:blur(2px);
+  animation: top-cloud-animation 15s infinite linear;
+}
+
+@keyframes top-cloud-animation {
+  0%   {right:  5%; opacity: 0;}
+  25%  {right:  8%; opacity: 0.5;}
+  50%  {right: 10%; opacity: 1;}
+  75%  {right: 12%; opacity: 0.5;}
+  100% {right: 15%; opacity: 0;}
 }
 
 .bottom-cloud {
   left: 5%;
   position: absolute;
-  top: 200px;
+  top: 45vh;
   width: 23%;
+  filter:blur(2px);
+  animation: bottom-cloud-animation 15s infinite linear;
 }
 
-.birds {
-  left: 15%;
+@keyframes bottom-cloud-animation {
+  0%   {left: 5%; opacity:0;}
+  25%  {left: 8%; opacity:0.5;}
+  50%  {left: 10%; opacity:1;}
+  75%  {left: 12%; opacity:0.5;}
+  100% {left: 15%; opacity:0;}
+}
+
+.birds-anim {
+  right: 5%;
   position: absolute;
-  top: 350px;
+  top: 85vh;
   width: 5%;
+  filter:blur(1px);
+  animation: birds-anim-animation 50s infinite linear;
 }
 
-.mountain-img {
-  width: 100%;
+@keyframes birds-anim-animation {
+  0%   {width: 7%; right: 5%;  top: 85%; opacity:0;}
+  10%  {width: 7%; right: 10%; top: 80%; opacity:1;}
+  25%  {width: 7%; right: 25%; top: 75%; opacity:1;}
+  50%  {width: 7%; right: 50%; top: 85%; opacity:1;}
+  75%  {width: 7%; right: 70%; top: 75%; opacity:1;}
+  90%  {width: 7%; right: 80%; top: 80%; opacity:1;}
+  100% {width: 7%; right: 85%; top: 85%; opacity:0;}
 }
+
+.intro-text:before {
+  content: '[ tech support ]';
+  font-size: 100%;
+  animation: intro-text-animation 8s infinite linear;
+}
+
+@keyframes intro-text-animation {
+  0%   { font-size: 100%; opacity:   1; content: '[ tech support ]'}
+  25%  { font-size:  90%; opacity: -.5;}
+  50%  { font-size: 100%; opacity:   1; content: '[ future web developer ]'}
+  75%  { font-size:  90%; opacity: -.5;}
+  100% { font-size: 100%; opacity:   1;}
+}
+
 
 
 /* ====================================================================== */
@@ -88,10 +146,11 @@ p {
   width: 40%;
 }
 
-
 .profile-text {
   text-align: left;
 }
+
+
 
 /* ====================================================================== */
 /* SKILLS */
@@ -107,17 +166,24 @@ p {
 }
 
 .icon-left {
-  border-radius: 10%;
+  border-radius: 15px 35px;
   float: left;
   margin-right: 30px;
   width: 28%;
+  filter: blur(1px) grayscale(50%);
 }
 
 .icon-right {
-  border-radius: 10%;
+  border-radius: 15px 35px;
   float: right;
   margin-left: 30px;
   width: 28%;
+  filter: blur(1px) grayscale(50%);
+}
+
+.icon-left:hover, .icon-right:hover {
+  transform: scale(1.1);
+  filter: blur(0) grayscale(0%);
 }
 
 
@@ -128,6 +194,7 @@ p {
   margin: 40px auto;
   width: 40%;
 }
+
 
 
 /* ====================================================================== */
@@ -181,6 +248,7 @@ a:hover {
   border-radius: 20px;
   text-decoration: none;
 }
+
 
 
 /* ====================================================================== */
