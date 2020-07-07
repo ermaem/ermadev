@@ -128,7 +128,7 @@ p {
 @keyframes intro-text-animation {
   0%   { font-size: 100%; opacity:   1; content: '[ tech support ]'}
   25%  { font-size:  90%; opacity: -.5;}
-  50%  { font-size: 100%; opacity:   1; content: '[ web developer ]'}
+  50%  { font-size: 100%; opacity:   1; content: '[ future web developer ]'}
   75%  { font-size:  90%; opacity: -.5;}
   100% { font-size: 100%; opacity:   1;}
 }
@@ -143,7 +143,7 @@ p {
   float: left;
   margin: 25px 0;
   margin-right: 35px;
-  width: 50%;
+  width: 40%;
 }
 
 .profile-text {
@@ -186,13 +186,17 @@ p {
   filter: blur(0) grayscale(0%);
 }
 
+.skill-list {
+  margin-left: 33%;
+}
+
 
 /* ====================================================================== */
 /* GET IN TOUCH */
 
 .contact-me {
   margin: 40px auto;
-  width: 50%;
+  width: 40%;
 }
 
 
