@@ -128,7 +128,7 @@ p {
 @keyframes intro-text-animation {
   0%   { font-size: 100%; opacity:   1; content: '[ tech support ]'}
   25%  { font-size:  90%; opacity: -.5;}
-  50%  { font-size: 100%; opacity:   1; content: '[ future web developer ]'}
+  50%  { font-size: 100%; opacity:   1; content: '[ web developer ]'}
   75%  { font-size:  90%; opacity: -.5;}
   100% { font-size: 100%; opacity:   1;}
 }
