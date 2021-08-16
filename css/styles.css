@@ -124,13 +124,13 @@ ul {
   100% {width: 7%; right: 85%; top: 85%; opacity:0;}
 }
 
+/*
 .intro-text:before {
   content: '[ tech support ]';
   font-size: 100%;
   animation: intro-text-animation 8s infinite linear;
 }
 
-/*
 @keyframes intro-text-animation {
   0%   { font-size: 100%; opacity:   1; content: '[ IT Support ]'}
   25%  { font-size:  90%; opacity: -.5;}
@@ -139,6 +139,12 @@ ul {
   100% { font-size: 100%; opacity:   1;}
 }
 */
+
+.intro-text:before {
+  content: '[ Coming Soon ]';
+  font-size: 100%;
+  animation: intro-text-animation 8s infinite linear;
+}
 
 @keyframes intro-text-animation {
   0%   { font-size: 100%; opacity:   1; content: '[ Coming Soon ]'}
