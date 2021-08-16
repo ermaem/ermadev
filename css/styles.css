@@ -130,6 +130,7 @@ ul {
   animation: intro-text-animation 8s infinite linear;
 }
 
+/*
 @keyframes intro-text-animation {
   0%   { font-size: 100%; opacity:   1; content: '[ IT Support ]'}
   25%  { font-size:  90%; opacity: -.5;}
@@ -137,7 +138,15 @@ ul {
   75%  { font-size:  90%; opacity: -.5;}
   100% { font-size: 100%; opacity:   1;}
 }
+*/
 
+@keyframes intro-text-animation {
+  0%   { font-size: 100%; opacity:   1; content: '[ Coming Soon ]'}
+  25%  { font-size:  90%; opacity: -.5;}
+  50%  { font-size: 100%; opacity:   1; content: '[ Coming Soon ]'}
+  75%  { font-size:  90%; opacity: -.5;}
+  100% { font-size: 100%; opacity:   1;}
+}
 
 
 /* ====================================================================== */
